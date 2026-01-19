@@ -8,5 +8,6 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 3000,
     allowedHosts: true // 允许所有主机访问，解决certbot验证问题
-  }
+  },
+  base: './'
 })
