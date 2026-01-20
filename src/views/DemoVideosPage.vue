@@ -1,6 +1,6 @@
 <script setup lang="ts">
-// Demo Videos Page Component
 import { useLanguage } from '../composables/useLanguage'
+import videoFile from '../assets/RTHeterogeneousCompute.mp4'
 
 const { t } = useLanguage()
 </script>
@@ -14,7 +14,7 @@ const { t } = useLanguage()
         <h2 class="section-title">{{ t('demoVideos.caseStudyTitle') }}</h2>
         <div class="video-container">
           <video controls class="demo-video">
-            <source src="../assets/RTHeterogeneousCompute.mp4" type="video/mp4">
+            <source :src="videoFile" type="video/mp4">
             {{ t('demoVideos.browserNotSupport') }}
           </video>
         </div>

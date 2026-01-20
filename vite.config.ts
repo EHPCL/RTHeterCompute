@@ -9,5 +9,15 @@ export default defineConfig({
     port: 3000,
     allowedHosts: true // 允许所有主机访问，解决certbot验证问题
   },
-  base: './'
+  base: '/RTHeterCompute/',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          monaco: ['monaco-editor'],
+          vendor: ['vue', 'vue-router', 'vue-i18n']
+        }
+      }
+    }
+  }
 })

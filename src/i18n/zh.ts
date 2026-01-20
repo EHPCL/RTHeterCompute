@@ -101,7 +101,10 @@ export default {
     title: '博客',
     subtitle: '项目更新和里程碑',
     filter: {
-      all: '全部'
+      all: '全部',
+      research: '研究',
+      tutorials: '教程',
+      news: '新闻'
     },
     milestones: {
       v1Release: {

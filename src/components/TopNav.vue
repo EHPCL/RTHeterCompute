@@ -1,8 +1,7 @@
 <script setup lang="ts">
-// Top Navigation Bar Component
-import { useLanguage } from '../composables/useLanguage'
+// import { useLanguage } from '../composables/useLanguage'
 
-const { t, locale, changeLanguage, languages } = useLanguage()
+// const { t, locale, languages, changeLanguage } = useLanguage()
 </script>
 
 <template>
@@ -15,24 +14,24 @@ const { t, locale, changeLanguage, languages } = useLanguage()
     </div>
     
     <nav class="main-nav">
-      <router-link to="/" class="nav-link">{{ t('nav.home') }}</router-link>
-      <router-link to="/try-tool" class="nav-link">{{ t('nav.tryTool') }}</router-link>
-      <router-link to="/blog" class="nav-link">{{ t('nav.blog') }}</router-link>
-      <router-link to="/examples" class="nav-link">{{ t('nav.examples') }}</router-link>
-      <router-link to="/demo-videos" class="nav-link">{{ t('nav.demoVideos') }}</router-link>
+      <router-link to="/" class="nav-link">Home</router-link>
+      <router-link to="/try-tool" class="nav-link">Try the tool</router-link>
+      <router-link to="/blog" class="nav-link">Blog</router-link>
+      <router-link to="/examples" class="nav-link">Papers</router-link>
+      <router-link to="/demo-videos" class="nav-link">Demo Videos</router-link>
     </nav>
     
     <div class="right-section">
       <div class="lang-switch">
-        <button 
+        <!-- <button 
           v-for="lang in languages" 
-          :key="lang.code"
-          class="lang-btn"
+          :key="lang.code" 
+          class="lang-btn" 
           :class="{ active: locale === lang.code }"
           @click="changeLanguage(lang.code)"
         >
           {{ lang.name }}
-        </button>
+        </button> -->
       </div>
     </div>
   </header>

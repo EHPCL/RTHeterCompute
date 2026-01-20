@@ -101,7 +101,10 @@ export default {
     title: 'Blog',
     subtitle: 'Project updates and milestones',
     filter: {
-      all: 'All'
+      all: 'All',
+      research: 'Research',
+      tutorials: 'Tutorials',
+      news: 'News'
     },
     milestones: {
       v1Release: {

@@ -1,69 +1,69 @@
 <template>
   <div class="home-page">
     <section class="hero">
-      <h1>{{ t('home.title') }}</h1>
-      <p>{{ t('home.subtitle') }}</p>
+      <h1>RTComputeSimulator</h1>
+      <p>Optimize the Real-Time Tasks on the Heterogeneous CPU GPU DPFA Platforms</p>
       <div class="quick-links">
-        <router-link to="/try-tool" class="link-button primary-button">{{ t('home.tryTool') }} ➜</router-link>
-        <a href="#about" class="link-button">{{ t('home.introduction') }}</a>
+        <router-link to="/try-tool" class="link-button primary-button">Try the tool ➜</router-link>
+        <a href="#/#about" class="link-button">Introduction</a>
       </div>
     </section>
     <section class="about" id="about">
-      <h2>{{ t('home.about.title') }}</h2>
-      <p>{{ t('home.about.description') }}</p>
+      <h2>About RTComputeSimulator</h2>
+      <p>RTComputeSimulator is a state-of-the-art real-time computing system simulator designed to help researchers and engineers analyze, optimize, and validate system performance under various scenarios. Our simulator provides comprehensive support for multiple processor architectures and task models, enabling users to explore the full potential of computing systems.</p>
     </section>
 
     <section class="features">
-      <h2>{{ t('home.features.title') }}</h2>
+      <h2>Key Features</h2>
       <div class="feature-grid">
         <div class="feature-card glass-card">
-          <h3>{{ t('home.features.processorModels.title') }}</h3>
-          <p>{{ t('home.features.processorModels.description') }}</p>
+          <h3>Processor Models</h3>
+          <p>Support for CPU, GPU, DATACOPY, FPGA models</p>
         </div>
         <div class="feature-card glass-card">
-          <h3>{{ t('home.features.taskModels.title') }}</h3>
-          <p>{{ t('home.features.taskModels.description') }}</p>
+          <h3>Task Models</h3>
+          <p>DAG and Suspension task models</p>
         </div>
         <div class="feature-card glass-card">
-          <h3>{{ t('home.features.rlSupport.title') }}</h3>
-          <p>{{ t('home.features.rlSupport.description') }}</p>
+          <h3>RL Support</h3>
+          <p>Reinforcement Learning scheduling algorithms</p>
         </div>
         <div class="feature-card glass-card">
-          <h3>{{ t('home.features.sliceTickModel.title') }}</h3>
-          <p>{{ t('home.features.sliceTickModel.description') }}</p>
+          <h3>Slice/Tick Model</h3>
+          <p>Detailed simulation with slice/tick granularity</p>
         </div>
       </div>
     </section>
 
     <section class="how-it-works">
-      <h2>{{ t('home.howItWorks.title') }}</h2>
+      <h2>How it works</h2>
       <div class="workflow-steps">
         <router-link to="/try-tool" class="step-link">
           <div class="step-card glass-card">
             <div class="step-number">1</div>
-            <h3>{{ t('home.howItWorks.steps.configureHardware.title') }}</h3>
-            <p>{{ t('home.howItWorks.steps.configureHardware.description') }}</p>
+            <h3>Configure Hardware</h3>
+            <p>Select and configure various processor types (CPU, GPU, FPGA, etc.) and their parameters.</p>
           </div>
         </router-link>
         <router-link to="/try-tool" class="step-link">
           <div class="step-card glass-card">
             <div class="step-number">2</div>
-            <h3>{{ t('home.howItWorks.steps.defineTasks.title') }}</h3>
-            <p>{{ t('home.howItWorks.steps.defineTasks.description') }}</p>
+            <h3>Define Tasks</h3>
+            <p>Create task sets with different models (DAG or self-suspension) and customize their properties.</p>
           </div>
         </router-link>
         <router-link to="/try-tool" class="step-link">
           <div class="step-card glass-card">
             <div class="step-number">3</div>
-            <h3>{{ t('home.howItWorks.steps.runSimulation.title') }}</h3>
-            <p>{{ t('home.howItWorks.steps.runSimulation.description') }}</p>
+            <h3>Run Simulation</h3>
+            <p>Select the scheduling algorithm, start the simulation and monitor progress in real-time.</p>
           </div>
         </router-link>
         <router-link to="/try-tool" class="step-link">
           <div class="step-card glass-card">
             <div class="step-number">4</div>
-            <h3>{{ t('home.howItWorks.steps.analyzeResults.title') }}</h3>
-            <p>{{ t('home.howItWorks.steps.analyzeResults.description') }}</p>
+            <h3>Analyze Results</h3>
+            <p>View detailed statistics, performance metrics, and download trace files for further analysis.</p>
           </div>
         </router-link>
       </div>
@@ -72,18 +72,17 @@
 
 
     <section class="contact">
-      <h2>{{ t('home.contact.title') }}</h2>
-      <p>{{ t('home.contact.description') }}</p>
-      <a href="mailto:RTHeterogeneousCompute@outlook.com" class="contact-email">{{ t('home.contact.email') }}</a>
+      <h2>Contact</h2>
+      <p>For any inquiries or support, please reach out to us at:</p>
+      <a href="mailto:RTHeterogeneousCompute@outlook.com" class="contact-email">RTHeterogeneousCompute@outlook.com</a>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
-// HomePage component logic
-import { useLanguage } from '../composables/useLanguage'
+// import { useLanguage } from '../composables/useLanguage'
 
-const { t } = useLanguage()
+// const { t } = useLanguage()
 </script>
 
 <style scoped>
