@@ -238,7 +238,7 @@ const handleFileUpload = (event: Event) => {
 // Load default example
 const loadDefaultExample = async () => {
   try {
-    const response = await fetch('/src/examples/task_config_example.json')
+    const response = await fetch('/examples/task_config_example.json')
     const defaultExample = await response.json()
     
     // Load the example into uploaded tasks
@@ -272,7 +272,7 @@ const loadDefaultExample = async () => {
 // Load Vit + LM example
 const loadVitLmExample = async () => {
   try {
-    const response = await fetch('/src/examples/vit_llama_example.json')
+    const response = await fetch('/examples/vit_llama_example.json')
     const vitLmExample = await response.json()
     
     // Load the example into uploaded tasks
@@ -306,7 +306,7 @@ const loadVitLmExample = async () => {
 // Load MLP example
 const loadMlpExample = async () => {
   try {
-    const response = await fetch('/src/examples/mnist_mlp_example.json')
+    const response = await fetch('/examples/mnist_mlp_example.json')
     const mlpExample = await response.json()
     
     // Load the example into uploaded tasks
@@ -342,7 +342,7 @@ const showDefaultExample = () => {
   // Create a temporary JSON file and download it
   // Instead of hardcoding, we'll download the same file we use for loading
   const a = document.createElement('a')
-  a.href = '/src/examples/task_config_example.json'
+  a.href = '/examples/task_config_example.json'
   a.download = 'task_config_example.json'
   a.click()
   

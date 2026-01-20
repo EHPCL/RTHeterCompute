@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { useLanguage } from '../composables/useLanguage'
+// import { useLanguage } from '../composables/useLanguage'
 
-const { t } = useLanguage()
+// const { t } = useLanguage()
 
 // Timeline milestone interface
 interface Milestone {
@@ -90,8 +90,8 @@ const handleFilterChange = (tag: string | null) => {
 <template>
   <div class="blog-page">
     <header class="blog-header">
-      <h1>{{ t('blog.title') }}</h1>
-      <p>{{ t('blog.subtitle') }}</p>
+      <h1>Blog</h1>
+      <p>Project updates and milestones</p>
       
       <!-- Tag filter -->
       <div class="tag-filter">
@@ -100,7 +100,7 @@ const handleFilterChange = (tag: string | null) => {
           :class="{ active: !selectedTag }"
           @click="handleFilterChange(null)"
         >
-          {{ t('blog.filter.all') }}
+          All
         </button>
         <button 
           v-for="tag in allTags" 

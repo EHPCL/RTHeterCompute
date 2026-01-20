@@ -40,7 +40,6 @@
 <style scoped>
 .top-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: rgba(15, 23, 42, 0.8);
@@ -54,6 +53,7 @@
 .logo-section {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .logo-link {
@@ -78,6 +78,8 @@
 .main-nav {
   display: flex;
   gap: 2rem;
+  flex: 2;
+  justify-content: center;
 }
 
 .nav-link {
@@ -98,6 +100,8 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .lang-switch {

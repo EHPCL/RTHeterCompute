@@ -1,33 +1,34 @@
 <script setup lang="ts">
-import { useLanguage } from '../composables/useLanguage'
-import videoFile from '../assets/RTHeterogeneousCompute.mp4'
+// import { useLanguage } from '../composables/useLanguage'
+// import videoFile from '../assets/RTHeterogeneousCompute.mp4'
 
-const { t } = useLanguage()
+// const { t } = useLanguage()
+const videoFile = 'https://github.com/EHPCL/RTHeterCompute/releases/download/demo_videos/RTHeterogeneousCompute-D8iY-EUv.mp4'
 </script>
 
 <template>
   <div class="demo-videos-page">
     <div class="container">
-      <h1 class="page-title">{{ t('demoVideos.title') }}</h1>
+      <h1 class="page-title">Demo Videos</h1>
       
       <div class="video-section">
-        <h2 class="section-title">{{ t('demoVideos.caseStudyTitle') }}</h2>
+        <h2 class="section-title">Case Study: RL-driven Scheduling</h2>
         <div class="video-container">
           <video controls class="demo-video">
             <source :src="videoFile" type="video/mp4">
-            {{ t('demoVideos.browserNotSupport') }}
+            Your browser does not support the video tag.
           </video>
         </div>
         <div class="video-description">
-          <h3>{{ t('demoVideos.videoTitle') }}</h3>
+          <h3>Reinforcement Learning Scheduler Improves ViT and Language Model Task Scheduling</h3>
           <p>
-            {{ t('demoVideos.description1') }}
+            This demonstration video shows how RTComputeSimulator uses reinforcement learning scheduling to optimize the deployment of computationally intensive tasks such as Vision Transformers (ViT) and Language Models.
           </p>
           <p>
-            {{ t('demoVideos.description2') }}
+            Through intelligent scheduling algorithms, the system can dynamically adjust task allocation strategies based on task characteristics and hardware resource status, significantly improving the overall performance and resource utilization of heterogeneous computing systems.
           </p>
           <p>
-            {{ t('demoVideos.description3') }}
+            The video includes visualizations of the actual scheduling process and performance comparison analyses under different scheduling strategies, helping you intuitively understand the advantages of the reinforcement learning scheduler.
           </p>
         </div>
       </div>

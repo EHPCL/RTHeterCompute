@@ -14,6 +14,9 @@ const emit = defineEmits<{
   'update:isRunning': [isRunning: boolean]
 }>()
 
+// Backend server URL
+const BACKEND_URL = 'http://121.41.69.219:5100'
+
 // Scheduling algorithm options
 type SchedulingAlgorithm = 'RM' | 'EDF' | 'Reinforcement Learning' | 'User-defined';
 
@@ -81,7 +84,7 @@ const checkBackendStatus = async () => {
   try {
     backendStatus.value = 'loading'
     simulationState.status = 'Checking backend status...'
-    const response = await fetch('/api/status')
+    const response = await fetch(`${BACKEND_URL}/status`)
     if (response.ok) {
       backendStatus.value = 'ready'
       simulationState.status = 'Ready to run'
@@ -201,7 +204,7 @@ const startSimulation = async () => {
       
       // Debug: Print simulation request data
       console.log("Sending simulation request with data:", JSON.stringify(apiRequestData, null, 2))
-      const response = await fetch('/api/run-simulation', {
+      const response = await fetch(`${BACKEND_URL}/run-simulation`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -227,7 +230,7 @@ const startSimulation = async () => {
       // Function to check simulation status
       const checkSimulationStatus = async () => {
         try {
-          const statusResponse = await fetch(`/api/simulation-status/${taskId}`)
+          const statusResponse = await fetch(`${BACKEND_URL}/simulation-status/${taskId}`)
           const statusData = await statusResponse.json()
           
           if (!statusData.success) {
@@ -470,7 +473,7 @@ const saveCustomAlgorithm = async () => {
     simulationState.status = 'Saving custom algorithm...'
     
     // Send the custom algorithm code to the backend
-    const response = await fetch('/api/save-custom-algorithm', {
+    const response = await fetch(`${BACKEND_URL}/save-custom-algorithm`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

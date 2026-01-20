@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useLanguage } from '../composables/useLanguage'
+// import { useLanguage } from '../composables/useLanguage'
 
-const { t } = useLanguage()
+// const { t } = useLanguage()
 
 // Example case interface
 interface ExampleCase {
@@ -143,8 +143,8 @@ const exampleCases = ref<ExampleCase[]>([
 <template>
   <div class="examples-page">
     <header class="examples-header">
-      <h1>{{ t('nav.examples') }}</h1>
-      <p>{{ t('examples.subtitle') }}</p>
+      <h1>Papers</h1>
+      <p>Research papers and case studies</p>
     </header>
 
     <main class="examples-content">
@@ -171,14 +171,14 @@ const exampleCases = ref<ExampleCase[]>([
             </div>
 
             <div class="case-configuration">
-              <h4>{{ t('examples.configuration') }}</h4>
+              <h4>Configuration</h4>
               <div class="config-grid">
                 <div class="config-item">
-                  <strong>{{ t('examples.hardware') }}</strong>
+                  <strong>Hardware:</strong>
                   <span>{{ exampleCase.configuration.hardware }}</span>
                 </div>
                 <div class="config-item">
-                  <strong>{{ t('examples.tasks') }}</strong>
+                  <strong>Tasks:</strong>
                   <span>{{ exampleCase.configuration.tasks }}</span>
                 </div>
                 <div class="config-item">
@@ -189,7 +189,7 @@ const exampleCases = ref<ExampleCase[]>([
             </div>
 
             <div class="case-results">
-              <h4>{{ t('examples.results') }}</h4>
+              <h4>Results</h4>
               <ul>
                 <li v-for="(result, index) in exampleCase.results" :key="index">
                   {{ result }}
@@ -204,7 +204,7 @@ const exampleCases = ref<ExampleCase[]>([
                 rel="noopener noreferrer"
                 class="paper-link"
               >
-                <span>{{ t('examples.readPaper') }}</span>
+                <span>Read Paper</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                   <polyline points="15 3 21 3 21 9"/>
@@ -239,14 +239,14 @@ const exampleCases = ref<ExampleCase[]>([
             </div>
 
             <div class="case-configuration">
-              <h4>{{ t('examples.configuration') }}</h4>
+              <h4>Configuration</h4>
               <div class="config-grid">
                 <div class="config-item">
-                  <strong>{{ t('examples.hardware') }}</strong>
+                  <strong>Hardware:</strong>
                   <span>{{ exampleCase.configuration.hardware }}</span>
                 </div>
                 <div class="config-item">
-                  <strong>{{ t('examples.tasks') }}</strong>
+                  <strong>Tasks:</strong>
                   <span>{{ exampleCase.configuration.tasks }}</span>
                 </div>
                 <div class="config-item">
@@ -257,7 +257,7 @@ const exampleCases = ref<ExampleCase[]>([
             </div>
 
             <div class="case-results">
-              <h4>{{ t('examples.results') }}</h4>
+              <h4>Results</h4>
               <ul>
                 <li v-for="(result, index) in exampleCase.results" :key="index">
                   {{ result }}
@@ -272,7 +272,7 @@ const exampleCases = ref<ExampleCase[]>([
                 rel="noopener noreferrer"
                 class="paper-link"
               >
-                <span>{{ t('examples.readPaper') }}</span>
+                <span>Read Paper</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                   <polyline points="15 3 21 3 21 9"/>
@@ -307,14 +307,14 @@ const exampleCases = ref<ExampleCase[]>([
             </div>
 
             <div class="case-configuration">
-              <h4>{{ t('examples.configuration') }}</h4>
+              <h4>Configuration</h4>
               <div class="config-grid">
                 <div class="config-item">
-                  <strong>{{ t('examples.hardware') }}</strong>
+                  <strong>Hardware:</strong>
                   <span>{{ exampleCase.configuration.hardware }}</span>
                 </div>
                 <div class="config-item">
-                  <strong>{{ t('examples.tasks') }}</strong>
+                  <strong>Tasks:</strong>
                   <span>{{ exampleCase.configuration.tasks }}</span>
                 </div>
                 <div class="config-item">
@@ -325,7 +325,7 @@ const exampleCases = ref<ExampleCase[]>([
             </div>
 
             <div class="case-results">
-              <h4>{{ t('examples.results') }}</h4>
+              <h4>Results</h4>
               <ul>
                 <li v-for="(result, index) in exampleCase.results" :key="index">
                   {{ result }}
@@ -340,7 +340,7 @@ const exampleCases = ref<ExampleCase[]>([
                 rel="noopener noreferrer"
                 class="paper-link"
               >
-                <span>{{ t('examples.readPaper') }}</span>
+                <span>Read Paper</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                   <polyline points="15 3 21 3 21 9"/>
